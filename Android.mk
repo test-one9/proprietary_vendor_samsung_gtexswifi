@@ -18,4 +18,34 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),gtexswifi)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := libwrappergps
+LOCAL_MODULE_OWNER := samsung
+LOCAL_SRC_FILES := proprietary/lib/libwrappergps.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libbt-vendor
+LOCAL_MODULE_OWNER := samsung
+LOCAL_SRC_FILES := proprietary/lib/libbt-vendor.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libsecnativefeature
+LOCAL_MODULE_OWNER := samsung
+LOCAL_SRC_FILES := proprietary/lib/libsecnativefeature.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
 endif
